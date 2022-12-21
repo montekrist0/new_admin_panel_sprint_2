@@ -7,6 +7,7 @@ ENV HOME=/home/app
 ENV APP_HOME=/home/app/movies_admin
 
 RUN mkdir -p $APP_HOME/staticfiles
+RUN mkdir $APP_HOME/mediafiles
 WORKDIR $APP_HOME
 
 COPY ./requirements.txt .

@@ -4,7 +4,7 @@ services:
     image: postgres:13
     container_name: db_container
     env_file:
-      - ./.env
+      - ./.env.db
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "${POSTGRES_DB}", "-U", "${POSTGRES_USER}" ]
       interval: 2s

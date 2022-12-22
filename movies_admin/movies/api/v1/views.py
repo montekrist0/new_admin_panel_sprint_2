@@ -47,7 +47,6 @@ class MoviesListApi(MoviesApiMixin, BaseListView):
             queryset,
             self.paginate_by
         )
-        # paginator.orphans = 5
 
         cur_page = self.request.GET.get('page')
 

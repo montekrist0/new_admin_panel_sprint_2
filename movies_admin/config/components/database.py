@@ -1,6 +1,5 @@
 from os import environ
 
-
 DATABASES = {
     'default': {
         'ENGINE': environ.get('DB_ENGINE', "django.db.backends.sqlite3"),

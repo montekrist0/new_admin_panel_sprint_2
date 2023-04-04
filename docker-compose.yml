@@ -23,6 +23,7 @@ services:
     volumes:
       - static_volume:/home/app/movies_admin/staticfiles
       - media_volume:/home/app/movies_admin/mediafiles
+      - ./tmp/logs/app:/home/app/movies_admin/log
     depends_on:
       admin_panel_db:
         condition: service_healthy
@@ -53,6 +54,7 @@ services:
     image: docker.elastic.co/beats/filebeat:7.17.6
     volumes:
       - ./tmp/logs/nginx:/var/log/nginx:ro
+      - ./tmp/logs/app:/var/log/app:ro
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - admin_panel_nginx

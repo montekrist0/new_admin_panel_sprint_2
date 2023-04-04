@@ -10,6 +10,7 @@ base_settings = [
     'components/apps_middleware.py',
     'components/authorization.py',
     'components/templates.py',
+    'components/logs.py',
 ]
 
 include(*base_settings)

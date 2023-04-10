@@ -1,6 +1,6 @@
 filebeat.inputs:
 - type: log
-  tags: [ 'admin_auth' ]
+  tags: [ 'admin_nginx' ]
   enabled: true
   paths:
     - /var/log/nginx/*
